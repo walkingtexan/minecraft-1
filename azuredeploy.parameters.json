@@ -1,15 +1,15 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {                
+    "parameters": {
         "storageAccount_name": {
             "value": "stminecraftdata"
         },
         "logicApp_start_name": {
-            "value": "la-minecraft-start"
+            "value": "qn-minecraft-start"
         },
         "logicApp_stop_name": {
-            "value": "la-minecraft-stop"
+            "value": "qn-minecraft-stop"
         },
         "containerInstance_prefix": {
             "value": "aci-minecraft-"

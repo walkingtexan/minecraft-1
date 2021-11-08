@@ -5,18 +5,18 @@
     "parameters": {
         "tags": {
             "type": "object",
-            "defaultValue": { 
-                "owner": "Ping",
-                "app": "Minecraft Bedrock" 
+            "defaultValue": {
+                "owner": "SL",
+                "app": "Minecraft Bedrock"
             }
         },
         "location": {
             "type": "string",
-            "defaultValue": "australiaeast"
+            "defaultValue": "westus2"
         },
         "resourceGroup_name": {
             "type": "string",
-            "defaultValue": "Minecraft"
+            "defaultValue": "Minecraft-RG"
         },
         "storageAccount_name": {
             "type": "string"
@@ -80,8 +80,8 @@
                     "scope": "inner"    // Delay evaluation of the expression until that deployment begins.
                                         // If not, listkeys() to get storage account access key fails
 
-                                        /* 
-                                        When scope is set to outer, you can't use the reference and list* function in the outputs section of a 
+                                        /*
+                                        When scope is set to outer, you can't use the reference and list* function in the outputs section of a
                                         nested template for a resource you have deployed in the nested template. To return the values for a deployed
                                         resource in a nested template, either use inner scope or convert your nested template to a linked template.
                                         */
@@ -295,8 +295,8 @@
                                 "count": "[length(parameters('minecraft_worlds'))]"
                             }
                         },
-                        // Logic App   
-                        //    API Connection                     
+                        // Logic App
+                        //    API Connection
                         {
                             "type": "Microsoft.Web/connections",
                             "apiVersion": "2016-06-01",
@@ -341,7 +341,7 @@
                                                         "16"
                                                     ]
                                                 },
-                                                "timeZone": "New Zealand Standard Time"
+                                                "timeZone": "Pacific Standard Time"
                                             },
                                             "type": "Recurrence"
                                         }
